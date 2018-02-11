@@ -9,6 +9,8 @@ public class Vidas : MonoBehaviour {
     public Text textoVidas;
     public Pelota pelota;
     public Barra barra;
+    public GameObject gameOver;
+    public SiguienteNivel siguienteNivel;
 
 	// Use this for initialization
 	void Start () {
@@ -18,10 +20,27 @@ public class Vidas : MonoBehaviour {
 	// Update is called once per frame
 	public void PerderVida()
     {
+        if (vidas <= 0) return;
+
         Vidas.vidas--;
         textoVidas.text = "Vidas: " + Vidas.vidas;
-        barra.Reset();
-        pelota.Reset();
+
+        if (vidas <= 0)
+        {
+            //Mostraremos GameOver
+            gameOver.SetActive(true);
+            pelota.detenerMovimiento();
+            barra.enabled = false;
+            siguienteNivel.nivelACargar = "Portada";
+            siguienteNivel.ActivarCarga();
+
+        }
+        else
+        {
+            barra.Reset();
+            pelota.Reset();
+        }
+       
        
 
             
