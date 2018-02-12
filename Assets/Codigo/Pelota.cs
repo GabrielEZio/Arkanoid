@@ -13,7 +13,7 @@ public class Pelota : MonoBehaviour {
 
     public Transform barra;
 
-  
+    
 
     // Use this for initialization
     void Start () {
