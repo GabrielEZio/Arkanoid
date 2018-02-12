@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Niveles/Portada.unity
+    guid: 8860b7155fa4f9c45bfb1589ef457936
+  - enabled: 1
+    path: Assets/Niveles/primeraescena.unity
+    guid: 4c7c0a4393cd2ce48bc188631d6fa427
